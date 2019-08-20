@@ -13,7 +13,7 @@ Fork this directory and copy the newly forked repository path with clone <br>
 From the terminal:</p>
 <pre><code>jrene@JRSimUI MINGw64 $ git clone "PASTE_THE_COPIED_REPOSITORY_LINK_HERE" fullstack
 </code></pre>
-<p>Download application.py, database_populate.py, database_setup.py, static, and templates from this repository <br>
+<p>Download project.py, gaming_console.py, database_setup.py, client_secrets.json, fb_client_secrets.json, static, and templates from this repository <br>
 Copy these 3 files to the fullstack/catalog directory created from the git clone command</p>
 <h4> To Run Program</h4>
 <p>Open terminal and change directory to the cloned fullstack directory:</p>
