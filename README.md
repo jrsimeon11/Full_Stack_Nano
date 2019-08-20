@@ -15,3 +15,31 @@ From terminal:</p>
 </code></pre>
 <p>Download application.py, database_populate.py, database_setup.py, static, and templates from this repository <br>
 Copy these 3 files to the fullstack/catalog directory created from the git clone command</p>
+<h4> To Run Program</h4>
+<p>Open terminal and change directory to the cloned fullstack directory:</p>
+<pre><code>bash-3.2$ cd FULL_PATH_TO_NEWLY_CLONED_DIRECTORY
+</code></pre>
+<p>Use the ls command to see 2 files and 1 directory: CODEOWNERS, README.md, vagrant. Change directory to the catalog directory in the vagrant folder:</p>
+<pre><code>bash-3.2$ ls CODEOWNERS    README.md     vagrant
+bash-3.2$ cd vagrant/catalog
+</code></pre>
+<p>Launch virtual machine:</p>
+<pre><code>bash-3.2$ vagrant up
+</code></pre>
+<p>Log in the virtual machine:</p>
+<pre><code>bash-3.2$ vagrant sh
+vagrant@vagrant:~$
+</code></pre>
+<p>Change directory to correct folder</p>
+<pre><code>vagrant@vagrant:~$ cd ../../vagrant/catalog
+</code></pre>
+<p>Install external python library required for script</p>
+<pre><code>vagrant@vagrant:~$ sudo pip install flask_oauth
+</code></pre>
+<p>Setup &amp; populate database</p>
+<pre><code>vagrant@vagrant:~$ python database_setup.py
+vagrant@vagrant:~$ python gaming_consolez.py
+</code></pre>
+<p>Run program</p>
+<pre><code>vagrant@vagrant:~$ python project.py
+</code></pre>
