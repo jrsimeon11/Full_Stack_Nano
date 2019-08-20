@@ -34,12 +34,13 @@ vagrant@vagrant:~$
 <pre><code>vagrant@vagrant:~$ cd /vagrant/testCatalog
 </code></pre>
 <p>Install external python library required for script</p>
-<pre><code>vagrant@vagrant:~$ sudo pip install flask_oauth
+<pre><code>vagrant@vagrant:~$ sudo pip install flask
+vagrant@vagrant:~$ sudo pip install flask_oauth
 </code></pre>
-<p>Setup &amp; populate database</p>
+<p>Setup &amp; add data to the database</p>
 <pre><code>vagrant@vagrant:~$ python database_setup.py
-vagrant@vagrant:~$ python gaming_consolez.py
+vagrant@vagrant:~$ python gaming_console.py
 </code></pre>
-<p>Run program</p>
+<p>Run the program</p>
 <pre><code>vagrant@vagrant:~$ python project.py
 </code></pre>
