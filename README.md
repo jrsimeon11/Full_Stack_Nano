@@ -39,8 +39,8 @@ vagrant@vagrant:~$ sudo pip install flask_oauth
 </code></pre>
 <p>Setup &amp; add data to the database</p>
 <pre><code>vagrant@vagrant:~$ python database_setup.py
-vagrant@vagrant:~$ python gaming_console.py
+vagrant@vagrant:~$ python database_games.py
 </code></pre>
 <p>Run the program</p>
-<pre><code>vagrant@vagrant:~$ python project.py
+<pre><code>vagrant@vagrant:~$ python app.py
 </code></pre>
