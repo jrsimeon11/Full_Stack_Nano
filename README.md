@@ -21,7 +21,7 @@ Copy these 3 files to the fullstack/catalog directory created from the git clone
 </code></pre>
 <p>Use the ls command to see 2 files and 1 directory: CODEOWNERS, README.md, vagrant. Change directory to the catalog directory in the vagrant folder:</p>
 <pre><code>jrene@JRSimUI MINGw64 $ ls CODEOWNERS    README.md     vagrant
-jrene@JRSimUI MINGw64 $ cd vagrant/testCatalog
+jrene@JRSimUI MINGw64 $ cd vagrant/ItemCatalogProject
 </code></pre>
 <p>Launch virtual machine:</p>
 <pre><code>jrene@JRSimUI MINGw64 $ vagrant up
@@ -31,7 +31,7 @@ jrene@JRSimUI MINGw64 $ cd vagrant/testCatalog
 vagrant@vagrant:~$
 </code></pre>
 <p>Change directory to correct folder</p>
-<pre><code>vagrant@vagrant:~$ cd /vagrant/testCatalog
+<pre><code>vagrant@vagrant:~$ cd /vagrant/ItemCatalogProject
 </code></pre>
 <p>Install external python library required for script</p>
 <pre><code>vagrant@vagrant:~$ sudo pip install flask
