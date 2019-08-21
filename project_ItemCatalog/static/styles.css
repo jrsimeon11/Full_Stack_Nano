@@ -1,0 +1,36 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#login-info {
+	text-align: right;
+}
+
+.row, .container-fluid {
+	height: 100%;
+}
+
+#menu, #content {
+	height: 100%;
+}
+
+
+.btn:hover 
+{
+	border-color: rgb(172, 184, 10);
+}
+
+.page-header {
+	text-align: center;
+}
+
+#complete_consoles, #complete-companys {
+	width: 70%;
+}
+
+#add-gameconsole-form, #edit-gameconsole-form, #add-gamecompany-form {
+	width: 40%;
+}
