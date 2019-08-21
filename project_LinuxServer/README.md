@@ -1,6 +1,6 @@
 # Full_Stack_Nano
 
-<h2>Project Part 6: Build a Linux Server</h2>
+<h2>Project Part 5: Build a Linux Server</h2>
 </br>
 <p><strong>Project Description</strong> (from Udacity):</p>
 <blockquote>
