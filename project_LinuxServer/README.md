@@ -158,5 +158,4 @@ sudo git clone [CLONE URL OF YOUR CATALOG PROJECT ON GITHUB] catalog
 <p><strong>Thanks to these people for their README.md to help guide me through the project</strong> <br>
 <a href="https://github.com/stueken/FSND-P5_Linux-Server-Configuration">stueken</a>,
 <a href="https://github.com/rrjoson/udacity-linux-server-configuration">rrjoson</a>,
-<a href="https://github.com/jessica-hsu/Full-stack-Nanodegree/tree/master/project7">jessica-hsu</a>
 </article>
