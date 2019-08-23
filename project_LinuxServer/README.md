@@ -1,15 +1,15 @@
 # Full_Stack_Nano
 
-<h2>Project Part 5: Build a Linux Server</h2>
+<h2>Project Part 6: Build a Linux Server</h2>
 </br>
 <p><strong>Project Description</strong> (from Udacity):</p>
 <blockquote>
 <p>You will take a baseline installation of a Linux server and prepare it to host your web applications. You will secure your server from a number of attack vectors, install and configure a database server, and deploy one of your existing web applications onto it.</p>
 </blockquote>
 <h3>IP Address, SSH Port, Grader Login, Application URL</h3>
-<p><strong>Public IP Address:</strong> 54.81.123.246 <br>
+<p><strong>Public IP Address:</strong> 3.89.185.192 <br>
 <strong>SSH Port:</strong> 2200 <br>
-<strong>SSH login as Grader</strong>: ssh grader@54.81.123.246 -p 2200 -i ~/.ssh/linuxProject<br>
+<strong>SSH login as Grader</strong>:  ssh -v -i ~/.ssh/udacity_key.pem grader@3.89.185.192 -p 2200<br>
 <strong>App URL:</strong> <a href="" rel="nofollow"> App </a>
 <h3>Software Needed</h3>
 <p><strong>Software Needed:</strong> <br>
@@ -59,7 +59,7 @@ sudo dpkg-reconfigure --priority=low unattended-upgrades</p>
 </li>
 <li>
 <p>Change the SSH port from 22 to 2200. Make sure to configure the Lightsail firewall to allow it.</p>
-<pre><code>  sudo vim /etc/ssh/sshd_config
+<pre><code>  sudo nano /etc/ssh/sshd_config
 </code></pre>
 <p>change port form 22 to 2200</p>
 </li>
@@ -74,7 +74,7 @@ sudo dpkg-reconfigure --priority=low unattended-upgrades</p>
   sudo ufw allow 123/tcp
   sudo ufw enable
 </code></pre>
-<p>Warning: When changing the SSH port, make sure that the firewall is open for port 2200 first, so that you don't lock yourself out of the server. Review this video for details! When you change the SSH port, the Lightsail instance will no longer be accessible through the web app 'Connect using SSH' button. The button assumes the default port is being used. There are instructions on the same page for connecting from your terminal to the instance. Connect using those instructions and then follow the rest of the steps.</p>
+<p>When changing the SSH port, make sure that the firewall is open for port 2200 first, so that you don't lock yourself out of the server. So add Port 2200 after Port 22. When you change the SSH port, the Lightsail instance will no longer be accessible through the web app 'Connect using SSH' button. The button assumes the default port is being used. There are instructions on the same page for connecting from your terminal to the instance.</p>
 </li>
 </ul>
 </li>
@@ -89,7 +89,7 @@ sudo dpkg-reconfigure --priority=low unattended-upgrades</p>
 </li>
 <li>
 <p>Give grader the permission to sudo.</p>
-<pre><code>  sudo vim /etc/sudoers.d/grader
+<pre><code>  sudo nano /etc/sudoers.d/grader
 </code></pre>
 <p>add text <code>grader ALL=(ALL) NOPASSWD:ALL</code></p>
 </li>
@@ -97,7 +97,7 @@ sudo dpkg-reconfigure --priority=low unattended-upgrades</p>
 <p>Create an SSH key pair for grader using the ssh-keygen tool.</p>
 <pre><code>
 ssh-keygen -t rsa
-Login: ssh grader@54.81.123.246 -p 2200 -i ~/.ssh/linuxProject
+Login: ssh -v -i ~/.ssh/udacity_key.pem grader@3.89.185.192
 </code></pre>
 </li>
 </ul>
@@ -116,8 +116,26 @@ Login: ssh grader@54.81.123.246 -p 2200 -i ~/.ssh/linuxProject
 <li>
 <p>Install and configure Apache to serve a Python mod_wsgi application.</p>
 <p>ngnix is used instead of Apache</p>
-<p>Apache configuration</p>
-<p><a href="https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-ubuntu-16-04" rel="nofollow">https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-ubuntu-16-04</a></p>
+<ol>
+<li>Install Apache and Wsgi</li>
+</ol>
+<pre><code>sudo apt-get install apache2
+sudo apt-get install libapache2-mod-wsgi python-dev
+sudo a2enmod wsgi
+sudo service apache2 start
+</code></pre>
+<ol start="2">
+<li>Install and set up Git stuff</li>
+</ol>
+<pre><code>sudo apt-get install git
+git config --global user.name [YOUR GIT USERNAME]
+git config --global user.email [YOUR GIT EMAIL]
+sudo cd /var/www
+sudo mkdir catalog
+sudo cd catalog
+sudo git clone [CLONE URL OF YOUR CATALOG PROJECT ON GITHUB] catalog
+</code></pre>
+<p></p>
 </li>
 <li>
 <p>Install and configure PostgreSQL:</p>
@@ -127,13 +145,18 @@ Login: ssh grader@54.81.123.246 -p 2200 -i ~/.ssh/linuxProject
 </ul>
 </li>
 <li>
-<p>Do not allow remote connections</p>
+<p>Remote connections must not be allowed</p>
 <p>Create a new database user named catalog that has limited permissions to your catalog application database.</p>
-<pre><code> https://help.ubuntu.com/community/PostgreSQL
-</code></pre>
+
 </li>
 <li>
 <p>Deploy the Item Catalog project.</p>
-<p><a href="App" rel="nofollow"></a></p>
+<p><a href="http://3.89.185.192" rel="nofollow">Item Catalog</a></p>
 </li>
 </ol>
+<h3>Resources</h3>
+<p><strong>Thanks to these people for their README.md to help guide me through the project</strong> <br>
+<a href="https://github.com/stueken/FSND-P5_Linux-Server-Configuration">stueken</a>,
+<a href="https://github.com/rrjoson/udacity-linux-server-configuration">rrjoson</a>,
+<a href="https://github.com/jessica-hsu/Full-stack-Nanodegree/tree/master/project7">jessica-hsu</a>
+</article>
