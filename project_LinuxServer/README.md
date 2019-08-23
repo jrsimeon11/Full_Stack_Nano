@@ -1,6 +1,6 @@
 # Full_Stack_Nano
 
-<h2>Project Part 6: Build a Linux Server</h2>
+<h2>Project Part 5: Build a Linux Server</h2>
 </br>
 <p><strong>Project Description</strong> (from Udacity):</p>
 <blockquote>
@@ -10,7 +10,7 @@
 <p><strong>Public IP Address:</strong> 3.89.185.192 <br>
 <strong>SSH Port:</strong> 2200 <br>
 <strong>SSH login as Grader</strong>:  ssh -v -i ~/.ssh/udacity_key.pem grader@3.89.185.192 -p 2200<br>
-<strong>App URL:</strong> <a href="" rel="nofollow"> App </a>
+<strong>Item Catalog:</strong> <a href="http://3.89.185.192" rel="nofollow"> App </a>
 <h3>Software Needed</h3>
 <p><strong>Software Needed:</strong> <br>
 Finger, Daemon NTPD, Apache2, Unattended Upgrades, Mod_wsgi (Apache HTTP server mod), Git, Pip, Flask, Virtualenv, Flask_oauth, httplib2, sqlalchemy, psycopg2, sqlalchemy_utils, Postgres, libpq-dev, Python
